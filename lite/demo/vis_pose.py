@@ -16,7 +16,7 @@ from multiprocessing import cpu_count, Pool, Process
 from typing import List, Optional, Sequence, Union
 
 import cv2
-import json_tricks as json
+import json_tricks as json # type: ignore
 import numpy as np
 import torch
 import torch.nn as nn
@@ -266,8 +266,8 @@ def main():
         raise ValueError("invalid input shape")
 
     mp.log_to_stderr()
-    torch._inductor.config.force_fuse_int_mm_with_mul = True
-    torch._inductor.config.use_mixed_mm = True
+    # torch._inductor.config.force_fuse_int_mm_with_mul = True
+    # torch._inductor.config.use_mixed_mm = True
 
     start = time.time()
 

@@ -15,3 +15,5 @@ __pycache__/
 *._*
 *.egg
 models/
+test_data/
+output/
